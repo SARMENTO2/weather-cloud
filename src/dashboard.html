@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Cloud Weather</title>
+</head>
+<body>
+  <h1>Tempo ao vivo - Cidade de Maputo</h1>
+  <p id="out">Carregando…</p>
+  <script>
+    const evt = new EventSource('/events');
+    evt.onmessage = e => {
+      const d = JSON.parse(e.data);
+      document.getElementById('out').textContent =
+        `${d.city}  ${d.temp} °C  |  umidade ${d.humidity} %  (${new Date(d.ts).toLocaleTimeString()})`;
+    };
+  </script>
+</body>
+</html>
