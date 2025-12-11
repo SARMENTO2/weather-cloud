@@ -5,4 +5,4 @@ services:
     plan: free
     envVars:
       - key: OPENWEATHER_KEY
-        value: demo   # troque pela chave real no painel do Render
+        value: 682417d60e064c3643bf34e5008974e4

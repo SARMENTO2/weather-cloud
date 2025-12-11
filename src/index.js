@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const API_KEY = process.env.OPENWEATHER_KEY || 'demo'; // gratis em https://openweathermap.org/api
-const CITY    = 'SaoPaulo,BR';
+const CITY    = 'Maputo,MZ';
 let cache   = [];           // “banco de dados” em memória
 
 // ---------- Ingestão + Processamento ----------
